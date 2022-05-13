@@ -164,7 +164,7 @@ export async function getKeyValue(
   namespaceId: string,
   key: string
 ): Promise<string> {
-  return await fetchKVGetValue(accountId, namespaceId, key);
+  return await fetchKVGetValue(accountId, namespaceId, encodeURIComponent(key));
 }
 
 export async function putBulkKeyValue(

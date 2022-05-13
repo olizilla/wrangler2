@@ -2016,9 +2016,7 @@ export async function main(argv: string[]): Promise<void> {
             const accountId = await requireAuth(config);
 
             await fetchResult<{ id: string }>(
-              `/accounts/${accountId}/storage/kv/namespaces/${encodeURIComponent(
-                id
-              )}`,
+              `/accounts/${accountId}/storage/kv/namespaces/${id}`,
               { method: "DELETE" }
             );
 
